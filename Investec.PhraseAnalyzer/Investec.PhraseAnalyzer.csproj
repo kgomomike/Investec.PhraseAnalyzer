@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyName>Investec.PhraseAnalyzer</AssemblyName>
+    <RootNamespace>Investec.PhraseAnalyzer</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Oratile Sethaba\.nuget\packages\nlog.config\4.7.11\contentFiles\any\any\NLog.config" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Ninject" Version="3.3.4" />
+    <PackageReference Include="NLog" Version="4.7.11" />
+    <PackageReference Include="NLog.Extensions.Logging" Version="1.7.4" />
+    <PackageReference Include="NLog.Schema" Version="4.7.11" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Investec.PhraseAnalyzer.Common\Investec.PhraseAnalyzer.Common.csproj" />
+    <ProjectReference Include="..\Investec.PhraseAnalyzer.Domain\Investec.PhraseAnalyzer.Domain.csproj" />
+    <ProjectReference Include="..\Investec.PhraseAnalyzer.Models\Investec.PhraseAnalyzer.Models.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Nlog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
